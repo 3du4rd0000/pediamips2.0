@@ -1,0 +1,78 @@
+
+
+  .resaltado {
+    border: 2px solid red;
+    box-shadow: 0 0 15px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bg-fondo {
+    background-image: url('../img/fondo.png'); /* ← corregida */
+    background-repeat: repeat;
+    background-size: 2000px auto; /* puedes ajustar más adelante */
+    background-position: top center;
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .contenedor, .contenido, .tarjeta, .formulario, .card {
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  }
+
+  footer img {
+  max-width: 80%;
+  height: auto;
+  }
+
+
+  nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  }
+  nav a {
+  flex: 1 1 45%;
+  min-width: 120px;
+  text-align: center;
+  }
+  
+  input, select, button {
+    width: 100% !important;
+    font-size: 1em;
+  }
+
+  .contenedor, .fila {
+  flex-direction: column !important;
+  align-items: center;
+  }
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+

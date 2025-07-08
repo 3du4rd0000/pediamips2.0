@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronología del Desarrollo Infantil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body class="bg-fondo font-sans p-6">
+
+  <nav class="bg-white shadow mb-10">
+    <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between items-center py-6 gap-4">
+        <div>
+          <a href="../../index.html" class="block h-14">
+            <img src="../../static/img/logo.png" alt="Logo Pediamips" class="h-[80px] inline-block mr-2 align-top">
+          </a>
+        </div>
+      <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 text-center">
+          <a href="#" class="text-gray-600 hover:text-blue-600">Desarrollo Infantil</a>
+          <a href="percentil-peso.html" class="text-gray-600 hover:text-blue-600">Percentil Peso</a>
+          <a href="imc-infantil.html" class="text-gray-600 hover:text-blue-600">IMC Infantil</a>
+          <a href="perimetro-cefalico.html" class="text-gray-600 hover:text-blue-600">PC Edad</a>
+          <a href="farmacos.html" class="text-gray-600 hover:text-blue-600">Calculadora Farmacológica</a>
+          <a href="../protocolos/protocolos.html" class="text-gray-600 hover:text-blue-600">Protocolos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <header class="max-w-3xl mx-auto mb-10">
+        <div class="bg-white p-6 rounded-xl shadow text-center">
+          <h1 class="text-4xl font-bold text-blue-700">Cronología del Desarrollo Infantil</h1>
+          <p class="text-gray-700 text-lg mt-2">Desde el nacimiento hasta los 24 meses</p>
+          <p class="text-sm text-gray-500 mt-1">Basado en <a href="https://www.cdc.gov/ncbddd/spanish/actearly/milestones/index.html"> CDC</a>, <a href="https://www.aap.org/en/patient-care/early-childhood/milestone-timeline/?srsltid=AfmBOopnr0PmxsyYstTU8tSUqHPTJNQan-_hBvEVVMAHPpklgoCOzqHC"> AAP</a> y <a href="https://paniamor.org/files/publication/files/7449_anexon1d111a.manualdeaplicacinmanualdenverii.anexospdf.pdf"> Denver II</a>. Adaptado al contexto mexicano.</p>
+        </div>
+      </header>      
+
+  <main class="space-y-10">
+    <section id="calculadora" class="max-w-2xl mx-auto"></section>
+    <section id="hitos" class="space-y-6 max-w-3xl mx-auto">
+        <div class="relative bg-white p-6 rounded-xl shadow" id="mes-0">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">Recién nacido (0 meses)</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Reflejo de succión y búsqueda</li>
+                <li>Reflejo de prensión palmar</li>
+                <li>Reflejo de Moro (sobresalto)</li>
+                <li>Fijar brevemente la mirada en rostros</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">En esta etapa, el recién nacido responde principalmente por reflejos automáticos. La visión es limitada y la interacción se centra en rostros y voces.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No responder a sonidos fuertes</li>
+                  <li>No seguir objetos con la mirada</li>
+                  <li>Letargo extremo o irritabilidad constante</li>
+                  <li>Ausencia de reflejos primarios</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-1">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">1 mes</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Levanta brevemente la cabeza en prono</li>
+                <li>Fija la mirada en objetos cercanos</li>
+                <li>Reacciona a sonidos fuertes</li>
+                <li>Muestra atención a rostros familiares</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">Comienza a desarrollar control cefálico leve y muestra atención hacia estímulos visuales y auditivos básicos.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No responder a sonidos fuertes</li>
+                  <li>No levantar la cabeza en prono</li>
+                  <li>No mostrar interés por rostros</li>
+                  <li>No fijar la mirada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-2">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">2 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Sonríe socialmente</li>
+                <li>Vocaliza sonidos suaves (arrullos)</li>
+                <li>Sigue objetos con la mirada hasta 90°</li>
+                <li>Sostiene la cabeza por breves periodos</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">Empieza la interacción social. La sonrisa refleja vínculo afectivo. Mejora la fijación visual y control postural inicial.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No sonreír a estímulos sociales</li>
+                  <li>No vocalizar</li>
+                  <li>No seguir objetos</li>
+                  <li>No sostener brevemente la cabeza</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-3">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">3 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Sostiene la cabeza con firmeza</li>
+                <li>Levanta el pecho en prono</li>
+                <li>Abrir y cerrar las manos</li>
+                <li>Balbucea y vocaliza más sonidos</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">Consolidación del control cefálico, inicio de movimientos voluntarios finos, incremento de la interacción verbal y social.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No sostener la cabeza</li>
+                  <li>No vocalizar</li>
+                  <li>No abrir las manos</li>
+                  <li>No responder a sonidos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">4 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Sostiene la cabeza sin apoyo</li>
+                <li>Se da vuelta de prono a supino</li>
+                <li>Agarra objetos con intención</li>
+                <li>Ríe a carcajadas</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">El control postural mejora considerablemente. Comienza el juego social con risas, y se desarrolla la coordinación mano-ojo.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No sostener la cabeza</li>
+                  <li>No reír ni emitir sonidos</li>
+                  <li>No fijar la mirada ni seguir objetos</li>
+                  <li>No mover extremidades simétricamente</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-5">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">5 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Se da vuelta en ambas direcciones</li>
+                <li>Se sienta con apoyo</li>
+                <li>Balbucea con sonidos consonánticos</li>
+                <li>Reconoce voces familiares</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">El bebé explora el entorno mediante giros. El balbuceo se enriquece, y hay mayor reconocimiento de estímulos familiares.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No rodar en ninguna dirección</li>
+                  <li>No mantener contacto visual</li>
+                  <li>No responder a sonidos familiares</li>
+                  <li>Falta de tono o rigidez marcada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-6">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">6 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Se sienta sin apoyo</li>
+                <li>Comienza a comer sólidos</li>
+                <li>Transfiere objetos entre manos</li>
+                <li>Responde a su nombre</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+              <p class="text-gray-700 mb-2">Se consolida el control postural para sentarse, aparecen habilidades manuales y respuesta auditiva a su propio nombre.</p>
+              <div class="bg-red-100 p-3 rounded">
+                <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                <ul class="list-disc pl-5 text-red-700 text-sm">
+                  <li>No sentarse con apoyo</li>
+                  <li>No transferir objetos</li>
+                  <li>No responder al nombre</li>
+                  <li>No balbucear ni vocalizar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="relative bg-white p-6 rounded-xl shadow" id="mes-7">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="text-xl font-bold text-blue-600">7 meses</h3>
+              <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg mb-2">
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>Se sienta con estabilidad</li>
+                <li>Inicia arrastre o reptación</li>
+                <li>Juega a esconderse (cucú)</li>
+                <li>Imita sonidos simples</li>
+              </ul>
+            </div>
+            <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                <p class="text-gray-700 mb-2">La movilidad comienza a desarrollarse con desplazamientos básicos. Aparece la intención lúdica e imitación de sonidos.</p>
+                <div class="bg-red-100 p-3 rounded">
+                  <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                  <ul class="list-disc pl-5 text-red-700 text-sm">
+                    <li>No intentar desplazarse</li>
+                    <li>No interactuar durante juegos</li>
+                    <li>No hacer sonidos nuevos</li>
+                    <li>No mostrar interés por personas u objetos</li>
+                  </ul>
+                </div>
+              </div>
+              </div> 
+    
+                    <div class="relative bg-white p-6 rounded-xl shadow" id="mes-8">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">8 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Se sienta sin apoyo de forma estable</li>
+                            <li>Toma objetos con pinza (pulgar e índice)</li>
+                            <li>Balbucea con intención comunicativa</li>
+                            <li>Muestra ansiedad ante extraños</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">El bebé adquiere mayor independencia postural, destrezas manuales finas e interacción emocional más compleja.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No mantenerse sentado</li>
+                              <li>No usar manos para explorar objetos</li>
+                              <li>No balbucear ni responder a sonidos</li>
+                              <li>No mostrar interés por personas</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-9">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">9 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Gatea o se desplaza coordinadamente</li>
+                            <li>Responde a su nombre constantemente</li>
+                            <li>Imita gestos (saludar, aplaudir)</li>
+                            <li>Comprende órdenes simples acompañadas de gestos</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">El niño empieza a comprender la comunicación no verbal, sigue instrucciones sencillas y se desplaza activamente.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No desplazarse de ninguna forma</li>
+                              <li>No responder al nombre</li>
+                              <li>No imitar gestos</li>
+                              <li>No expresar emociones básicas</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-10">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">10 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Se pone de pie con apoyo</li>
+                            <li>Realiza pinza fina (pulgar e índice)</li>
+                            <li>Entiende el “no”</li>
+                            <li>Dice sílabas repetidas: “mamá”, “papá”</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">El niño refina su motricidad fina y gruesa. Inicia la comprensión verbal básica y emite sonidos con intención.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No pararse con apoyo</li>
+                              <li>No usar pinza fina</li>
+                              <li>No imitar sonidos o gestos</li>
+                              <li>No entender palabras comunes</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-11">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">11 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Da pasos laterales con apoyo (crucero)</li>
+                            <li>Explora objetos golpeándolos o agitándolos</li>
+                            <li>Dice al menos una palabra con significado</li>
+                            <li>Juega con intención (dar, lanzar, esconder)</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Crecen las habilidades locomotoras, verbales y de juego. El niño inicia la marcha lateral con apoyo y el lenguaje significativo.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No desplazarse ni con apoyo</li>
+                              <li>No decir ninguna palabra significativa</li>
+                              <li>No manipular objetos de forma intencional</li>
+                              <li>No mostrar interés por interacción social</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-12">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">12 meses (1 año)</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Camina con una o ambas manos de apoyo</li>
+                            <li>Dice de 1 a 3 palabras con significado</li>
+                            <li>Imita acciones (barrer, peinarse)</li>
+                            <li>Busca objetos escondidos (permanencia del objeto)</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Marca el inicio de la marcha asistida. El lenguaje y el juego simbólico emergen, al igual que la comprensión de la permanencia de objetos.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No intentar caminar con apoyo</li>
+                              <li>No decir ninguna palabra</li>
+                              <li>No imitar gestos ni acciones</li>
+                              <li>No mostrar interés por objetos o personas</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-13">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">13 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Camina con mínima ayuda o da pasos solo</li>
+                            <li>Apila 2 cubos</li>
+                            <li>Señala objetos conocidos</li>
+                            <li>Dice entre 3 y 5 palabras significativas</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Avanza la independencia motora y el lenguaje expresivo. Se fortalece la coordinación visomotora con juegos simples.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No mantenerse de pie con apoyo</li>
+                              <li>No emitir palabras significativas</li>
+                              <li>No señalar o mostrar objetos</li>
+                              <li>No manipular juguetes de forma activa</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-14">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">14 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Camina de forma independiente</li>
+                            <li>Señala para pedir ayuda o nombrar algo</li>
+                            <li>Sigue instrucciones simples con gestos</li>
+                            <li>Imita acciones en el juego simbólico</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">El niño domina la marcha autónoma y se consolida la intención comunicativa mediante señalamientos e imitaciones lúdicas.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No caminar solo</li>
+                              <li>No señalar para comunicarse</li>
+                              <li>No imitar comportamientos</li>
+                              <li>No responder a instrucciones simples</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-15">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">15 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Camina de forma estable</li>
+                            <li>Sube escaleras con ayuda</li>
+                            <li>Dice al menos 4 a 6 palabras</li>
+                            <li>Usa cucharilla con asistencia</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">La marcha es firme y se incorporan habilidades de autonomía. Aparece el lenguaje expresivo funcional y el uso inicial de utensilios.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No caminar de forma firme</li>
+                              <li>No intentar subir escalones</li>
+                              <li>No decir palabras nuevas</li>
+                              <li>No usar objetos con función (cucharilla, peine)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-16">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">16 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Camina hacia atrás</li>
+                            <li>Hace torres de 2 a 3 bloques</li>
+                            <li>Dice de 6 a 10 palabras</li>
+                            <li>Señala partes del cuerpo</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Aumenta la coordinación motora y el lenguaje expresivo. Se desarrollan juegos de construcción y reconocimiento corporal.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No caminar en distintas direcciones</li>
+                              <li>No decir nuevas palabras</li>
+                              <li>No construir con objetos</li>
+                              <li>No señalar ni identificar partes del cuerpo</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-17">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">17 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Sube escalones con apoyo</li>
+                            <li>Hace garabatos con crayón</li>
+                            <li>Dice frases de 2 palabras</li>
+                            <li>Identifica y señala animales o juguetes</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Se desarrolla la motricidad fina en tareas artísticas básicas, el lenguaje combinatorio y la asociación verbal con objetos del entorno.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No subir escalones con ayuda</li>
+                              <li>No hacer trazos o garabatos</li>
+                              <li>No combinar palabras</li>
+                              <li>No reconocer objetos familiares</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-18">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">18 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Corre con control inicial</li>
+                            <li>Señala para mostrar interés</li>
+                            <li>Dice de 10 a 20 palabras</li>
+                            <li>Imita tareas del hogar (barrer, alimentar muñecos)</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Se evalúa lenguaje expresivo, juego simbólico y socialización. El niño explora el entorno con más autonomía y comprensión.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No correr ni caminar con confianza</li>
+                              <li>No decir al menos 6 palabras</li>
+                              <li>No señalar para indicar necesidades</li>
+                              <li>No mostrar juego simbólico</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-19">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">19 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Sube escaleras alternando pies con ayuda</li>
+                            <li>Dice entre 20 y 30 palabras</li>
+                            <li>Imita sonidos de animales</li>
+                            <li>Reconoce y nombra objetos en imágenes</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">La comunicación verbal mejora en calidad y cantidad. Se fortalece la memoria auditiva y visual. La imitación se hace más compleja.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No subir escalones con apoyo</li>
+                              <li>No aumentar vocabulario progresivamente</li>
+                              <li>No imitar sonidos ni juegos</li>
+                              <li>No responder a su nombre o instrucciones simples</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-20">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">20 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Corre con coordinación</li>
+                            <li>Construye torres de 4 o más bloques</li>
+                            <li>Nombre varias partes del cuerpo</li>
+                            <li>Dice frases de 2 a 3 palabras</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Se consolida el control motor grueso, el juego constructivo y la comunicación verbal básica. La comprensión y expresión aumentan.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No correr o caerse frecuentemente</li>
+                              <li>No usar frases cortas</li>
+                              <li>No identificar partes del cuerpo</li>
+                              <li>No construir ni manipular objetos intencionalmente</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-21">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">21 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Sube y baja muebles sin ayuda</li>
+                            <li>Usa frases con intención comunicativa</li>
+                            <li>Realiza juegos de simulación</li>
+                            <li>Muestra preferencia por personas o juguetes</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">La autonomía aumenta en desplazamiento y juego simbólico. Se observan preferencias personales y una comunicación más clara.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No subir o bajar objetos sin ayuda</li>
+                              <li>No usar frases para comunicarse</li>
+                              <li>No participar en juegos de simulación</li>
+                              <li>No mostrar interés por personas o actividades</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-22">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">22 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Imita líneas al trazar</li>
+                            <li>Dice 50 o más palabras</li>
+                            <li>Sigue instrucciones de 2 pasos</li>
+                            <li>Participa en juegos paralelos</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">El lenguaje se amplía notablemente. El niño puede comprender órdenes más complejas y participar con otros niños aunque sin interacción directa.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No ampliar vocabulario</li>
+                              <li>No seguir órdenes simples</li>
+                              <li>No interesarse por otros niños</li>
+                              <li>No imitar trazos o actividades adultas</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-23">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">23 meses</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Nombre colores u objetos familiares</li>
+                            <li>Contesta preguntas simples</li>
+                            <li>Sube y baja escaleras sin ayuda</li>
+                            <li>Imita acciones de rutina diaria</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">Mejora la expresión verbal y comprensión. Aparecen habilidades de clasificación básica y se integran actividades del entorno adulto.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No responder preguntas básicas</li>
+                              <li>No subir escaleras solo</li>
+                              <li>No imitar actividades diarias</li>
+                              <li>No usar el lenguaje como medio de interacción</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="relative bg-white p-6 rounded-xl shadow" id="mes-24">
+                        <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-xl font-bold text-blue-600">24 meses (2 años)</h3>
+                          <button class="toggle-details bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Ver más</button>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-2">
+                          <ul class="list-disc pl-5 text-gray-700">
+                            <li>Unir frases de 3 palabras</li>
+                            <li>Nombrar partes del cuerpo y objetos</li>
+                            <li>Control de esfínteres inicial (diurno)</li>
+                            <li>Imitar y jugar con otros niños</li>
+                          </ul>
+                        </div>
+                        <div class="milestone-details bg-blue-100 p-4 rounded-lg mt-2 hidden">
+                          <p class="text-gray-700 mb-2">A los 2 años, se consolidan la socialización, el lenguaje y la independencia. El juego ya es más simbólico y compartido.</p>
+                          <div class="bg-red-100 p-3 rounded">
+                            <h4 class="text-red-600 font-bold mb-1">Alertas rojas:</h4>
+                            <ul class="list-disc pl-5 text-red-700 text-sm">
+                              <li>No formar frases simples</li>
+                              <li>No nombrar objetos comunes</li>
+                              <li>No mostrar interés en jugar con otros</li>
+                              <li>No tener control diurno de esfínteres</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+    </section>
+  </main>
+  <footer class="mt-20 py-6">
+    <div class="bg-white rounded-xl px-6 py-4 w-fit mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+  
+      
+      <!-- Imagen hospital -->
+      <img src="../../static/img/MAC.png" alt="Hospital MAC" class="h-24 w-auto object-contain">
+  
+      <!-- Texto centrado -->
+      <div class="px-4">
+        <p class="text-gray-600 text-sm">
+          Diseñado y desarrollado por: <br> 
+          <span class="font-semibold text-blue-700">Eddie Emouna Chalon</span>
+        </p>
+        <p class="text-gray-500 text-xs mt-1">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+  
+      <!-- Imagen universidad -->
+      <img src="../../static/img/UW.png" alt="Universidad" class="h-16 w-auto object-contain">
+  
+    </div>
+</div>
+  </footer>
+  
+  
+  <script src="../../static/js/calculadoras/edad-corregida.js"></script>
+</body>
+</html>

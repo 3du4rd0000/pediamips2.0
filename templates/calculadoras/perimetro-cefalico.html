@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perímetro Cefálico Infantil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../static/css/style.css" />
+</head>
+
+<body class="bg-fondo font-sans p-6 min-h-screen">
+
+  <!-- NAVEGACIÓN -->
+  <nav class="bg-white shadow mb-10">
+    <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between items-center py-6 gap-4">
+        <div>
+          <a href="../index.html" class="block h-14">
+            <img src="../../static/img/logo.png" alt="Logo Pediamips" class="h-[80px] inline-block mr-2 align-top">
+          </a>
+        </div>
+      <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 text-center">
+          <a href="edad-corregida.html" class="text-gray-600 hover:text-blue-600">Desarrollo Infantil</a>
+          <a href="percentil-peso.html" class="text-gray-600 hover:text-blue-600">Percentil Peso</a>
+          <a href="imc-infantil.html" class="text-gray-600 hover:text-blue-600">IMC Infantil</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">PC Edad</a>
+          <a href="farmacos.html" class="text-gray-600 hover:text-blue-600">Calculadora Farmacológica</a>
+          <a href="../protocolos/protocolos.html" class="text-gray-600 hover:text-blue-600">Protocolos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow mb-8">
+    <h1 class="text-3xl font-bold text-blue-700 mb-2">Calculadora de Perímetro Cefálico</h1>
+    <p class="text-gray-600 text-lg">Evalúa el crecimiento craneal de tu paciente según edad y sexo.</p>
+    <p class="text-sm text-gray-500">Basado en curvas de crecimiento de la OMS (0–5 años).</p>
+  </header>
+
+  <!-- FORMULARIO -->
+  <main class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow space-y-4">
+    <div>
+      <label class="block text-gray-700 mb-1">Edad (meses):</label>
+      <input type="number" id="edadMeses" class="w-full border p-2 rounded" min="0" max="60" />
+    </div>
+    <div>
+      <label class="block text-gray-700 mb-1">Sexo:</label>
+      <select id="sexo" class="w-full border p-2 rounded">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-gray-700 mb-1">Perímetro cefálico (cm):</label>
+      <input type="number" step="0.1" id="pc" class="w-full border p-2 rounded" min="30" max="60" />
+    </div>
+    <button onclick="calcularPC()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Calcular</button>
+
+    <div id="resultado" class="hidden mt-6 p-4 rounded"></div>
+  </main>
+
+<section class="max-w-3xl mx-auto mt-16 bg-white p-6 rounded-xl shadow space-y-4">
+    <h2 class="text-2xl font-bold text-blue-700">📖 ¿Qué evalúa el Perímetro Cefálico Infantil?</h2>
+    <p class="text-gray-700">
+      El perímetro cefálico (PC) es un parámetro antropométrico esencial que evalúa el desarrollo neurológico y craneal del lactante y niño pequeño. 
+      Se mide con una cinta métrica flexible alrededor de la parte más prominente del cráneo, desde la frente (glabela) hasta la parte posterior (occipucio).
+    </p>
+  
+    <h3 class="text-xl font-semibold text-blue-600 mt-4">📐 ¿Cómo se interpreta el resultado?</h3>
+    <p class="text-gray-700">
+      Para interpretar correctamente el PC se comparan los valores obtenidos con los estándares de referencia, según sexo y edad.
+      Se utiliza la puntuación Z o desviación estándar (SD):
+    </p>
+    <ul class="list-disc pl-6 text-gray-700">
+      <li><strong>Z &lt; -2:</strong> Microcefalia</li>
+      <li><strong>Z &gt; +2:</strong> Macrocefalia</li>
+      <li><strong>-2 ≤ Z ≤ +2:</strong> Normal</li>
+    </ul>
+  
+    <h3 class="text-xl font-semibold text-blue-600 mt-4">📊 Tablas de referencia</h3>
+    <p class="text-gray-700">
+      Basadas en datos de la OMS (2006) y CDC (2000), estas tablas permiten calcular un Z score estándar. En esta herramienta se usan estimaciones aproximadas representativas para México.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto mt-12 bg-white p-6 rounded-xl shadow space-y-6">
+    <h2 class="text-2xl font-bold text-blue-700 text-center">📈 Tablas de Perímetro Cefálico según la OMS</h2>
+  
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-lg font-semibold text-blue-600 mb-2">Niños (0–5 años)</h3>
+        <img src="../../static/img/pc-ninos-oms.png" alt="Curvas OMS - Niños" class="rounded-xl shadow w-full max-w-3xl mx-auto" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-pink-500 mb-2">Niñas (0–5 años)</h3>
+        <img src="../../static/img/pc-ninas-oms.png" alt="Curvas OMS - Niñas" class="rounded-xl shadow w-full max-w-3xl mx-auto" loading="lazy" />
+      </div>
+    </div>
+  
+    <p class="text-sm text-gray-500 text-center mt-4">Fuente: Organización Mundial de la Salud (OMS) – WHO Child Growth Standards, Head circumference-for-age.</p>
+  </section>
+  
+  
+  <footer class="mt-20 py-6">
+    <div class="bg-white rounded-xl px-6 py-4 w-fit mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+  
+      
+      <!-- Imagen hospital -->
+      <img src="../../static/img/MAC.png" alt="Hospital MAC" class="h-24 w-auto object-contain">
+  
+      <!-- Texto centrado -->
+      <div class="px-4">
+        <p class="text-gray-600 text-sm">
+          Diseñado y desarrollado por: <br> 
+          <span class="font-semibold text-blue-700">Eddie Emouna Chalon</span>
+        </p>
+        <p class="text-gray-500 text-xs mt-1">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+  
+      <!-- Imagen universidad -->
+      <img src="../../static/img/UW.png" alt="Universidad" class="h-16 w-auto object-contain">
+  
+    </div>
+</div>
+  </footer>
+
+  <script src="../../static/js/calculadoras/perimetro.js"></script>
+</body>
+
+
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Percentil Peso</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body class="bg-fondo font-sans p-6">
+
+  <nav class="bg-white shadow mb-10">
+    <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between items-center py-6 gap-4">
+        <div>
+          <a href="../../index.html" class="block h-14">
+            <img src="../../static/img/logo.png" alt="Logo Pediamips" class="h-[80px] inline-block mr-2 align-top">
+          </a>
+        </div>
+      <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 text-center">
+          <a href="edad-corregida.html" class="text-gray-600 hover:text-blue-600">Desarrollo Infantil</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Percentil Peso</a>
+          <a href="imc-infantil.html" class="text-gray-600 hover:text-blue-600">IMC Infantil</a>
+          <a href="perimetro-cefalico.html" class="text-gray-600 hover:text-blue-600">PC Edad</a>
+          <a href="farmacos.html" class="text-gray-600 hover:text-blue-600">Calculadora Farmacológica</a>
+          <a href="../protocolos/protocolos.html" class="text-gray-600 hover:text-blue-600">Protocolos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow mb-10">
+    <h1 class="text-3xl font-bold text-blue-700 mb-2">Calculadora de Percentil de Peso</h1>
+    <p class="text-gray-600 text-lg">Estimación del percentil de peso según edad y sexo</p>
+    <p class="text-sm text-gray-500">Herramienta de orientación, no sustituye valoración médica.</p>
+  </header>
+
+  <!-- FORMULARIO -->
+  <main class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow mb-10">
+    <div>
+      <label class="block text-gray-700 mb-1">Edad del niño (en meses):</label>
+      <input type="number" id="edad" class="w-full border border-gray-300 p-2 rounded" min="0" max="240" required>
+    </div>
+    <div>
+      <label class="block text-gray-700 mb-1">Peso actual (kg):</label>
+      <input type="number" step="0.1" id="peso" class="w-full border border-gray-300 p-2 rounded" min="0" required>
+    </div>
+    <div>
+      <label class="block text-gray-700 mb-1">Sexo:</label>
+      <select id="sexo" class="w-full border border-gray-300 p-2 rounded">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+      </select>
+    </div>
+    <button onclick="calcularPercentil()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Calcular</button>
+
+    <!-- RESULTADO -->
+    <div id="resultado" class="mt-6 hidden p-4 rounded text-white"></div>
+  </main>
+
+  <section class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow mb-10">
+    <h2 class="text-lg font-semibold text-blue-800">Guía clínica sobre el uso de percentiles de peso en pediatría</h2>
+  
+    <p><strong>¿Qué es un percentil?</strong><br>
+    Un <em>percentil</em> es una medida estadística que indica la posición de un dato dentro de un conjunto. En pediatría, los percentiles permiten comparar el peso de un niño con respecto a una población de referencia del mismo sexo y edad. Por ejemplo, estar en el percentil 25 significa que el 25 % de los niños de esa edad y sexo pesan menos, y el 75 % pesan más.</p>
+  
+    <p><strong>Distribución normal y desviación estándar</strong><br>
+    El crecimiento infantil sigue una <em>distribución normal</em> (campana de Gauss), donde la mayoría de los niños se agrupan alrededor de la media. La <em>desviación estándar (DE)</em> mide cuánto se alejan los valores respecto a la media. Se considera normal un rango de -2 DE a +2 DE (entre los percentiles 3 y 97).</p>
+  
+    <p><strong>Score Z o puntuación Z</strong><br>
+    Es una forma estandarizada de expresar la desviación de un valor respecto a la media. Un Z = 0 indica la media, Z = -2 representa una posible desnutrición moderada, y Z = +2 indica sobrepeso. Es especialmente útil en contextos clínicos porque permite evaluar con precisión los extremos de la curva.</p>
+  
+    <p><strong>¿Qué tablas usar: OMS vs CDC?</strong><br>
+    La elección de la curva de crecimiento depende del contexto y la edad:
+    <ul class="list-disc ml-6 mt-2">
+      <li><strong>OMS (Organización Mundial de la Salud)</strong>: para <em>niños de 0 a 5 años</em>. Se basa en bebés sanos de distintas regiones, alimentados con leche materna exclusiva, criados en entornos ideales. Recomendadas para evaluar crecimiento fisiológico.</li>
+      <li><strong>CDC (Centros para el Control y Prevención de Enfermedades)</strong>: para <em>niños de 2 a 19 años</em>. Representan el crecimiento observado en la población de EE.UU., incluyendo variaciones como alimentación mixta y condiciones clínicas diversas. Útiles para poblaciones mixtas y seguimiento longitudinal en niños mayores.</li>
+    </ul></p>
+  
+    <p><strong>Interpretación clínica del percentil de peso</strong><br>
+    La posición de un niño en la curva de peso debe interpretarse dentro de un contexto clínico completo. Los valores extremos pueden sugerir:
+    <ul class="list-disc ml-6 mt-2">
+      <li><strong>Percentil &lt; 3</strong>: Riesgo de <span class="text-red-700 font-semibold">desnutrición</span></li>
+      <li><strong>Percentil 3–85</strong>: Considerado <span class="text-green-700 font-semibold">peso adecuado</span></li>
+      <li><strong>Percentil 85–97</strong>: Riesgo de <span class="text-yellow-600 font-semibold">sobrepeso</span></li>
+      <li><strong>Percentil &gt; 97</strong>: Posible <span class="text-red-600 font-semibold">obesidad</span></li>
+    </ul>
+    Estos rangos deben correlacionarse con otros parámetros como talla, perímetro cefálico, antecedentes perinatales, hábitos alimentarios y estado clínico.</p>
+  
+    <p><strong>Percentiles especiales en patologías</strong><br>
+    Existen <em>gráficas de crecimiento específicas</em> para condiciones clínicas como:
+    <ul class="list-disc ml-6 mt-2">
+      <li>Prematurez (gráficas de Fenton y INTERGROWTH-21st)</li>
+      <li>Síndrome de Down</li>
+      <li>Cardiopatías congénitas</li>
+      <li>Enfermedades metabólicas o endocrinas</li>
+    </ul>
+    Estas curvas permiten una valoración más adecuada y realista del crecimiento esperable en estos pacientes.</p>
+  
+    <p><strong>Definiciones operativas según la OMS</strong><br>
+    Para niños de 0 a 5 años:
+    <ul class="list-disc ml-6 mt-2">
+      <li><strong>Desnutrición aguda moderada</strong>: Z &lt; -2 DE</li>
+      <li><strong>Desnutrición aguda severa</strong>: Z &lt; -3 DE</li>
+      <li><strong>Sobrepeso</strong>: Z &gt; +2 DE</li>
+      <li><strong>Obesidad</strong>: Z &gt; +3 DE</li>
+    </ul>
+    Estas definiciones ayudan en la toma de decisiones clínicas y en la referencia oportuna al especialista.</p>
+  
+    <p><strong>Recomendación final</strong><br>
+    Ningún valor aislado es diagnóstico por sí solo. El seguimiento serial, la evaluación clínica integral y la comparación con otros indicadores antropométricos son esenciales para una correcta interpretación.</p>
+  </section>
+  
+
+  <!-- FOOTER -->
+  <footer class="mt-20 py-6">
+    <div class="bg-white rounded-xl px-6 py-4 w-fit mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+  
+      
+      <!-- Imagen hospital -->
+      <img src="../../static/img/MAC.png" alt="Hospital MAC" class="h-24 w-auto object-contain">
+  
+      <!-- Texto centrado -->
+      <div class="px-4">
+        <p class="text-gray-600 text-sm">
+          Diseñado y desarrollado por: <br> 
+          <span class="font-semibold text-blue-700">Eddie Emouna Chalon</span>
+        </p>
+        <p class="text-gray-500 text-xs mt-1">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+  
+      <!-- Imagen universidad -->
+      <img src="../../static/img/UW.png" alt="Universidad" class="h-16 w-auto object-contain">
+  
+    </div>
+</div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../static/js/calculadoras/percentil-peso.js"></script>
+
+</body>
+</html>

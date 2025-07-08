@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Plataforma de Pediatría</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body class="bg-fondo font-sans p-6 min-h-screen">
+
+  <nav class="bg-white shadow mb-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between items-center py-6 gap-4">
+      
+      <!-- LOGO -->
+      <div>
+        <a href="#" class="block h-14">
+          <img src="static/img/logo.png" alt="Logo Pediamips" class="h-[80px] mx-auto md:mx-0">
+        </a>
+      </div>
+
+      <!-- MENÚ -->
+      <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 text-center">
+        <a href="templates/calculadoras/edad-corregida.html" class="text-gray-600 hover:text-blue-600">Desarrollo Infantil</a>
+        <a href="templates/calculadoras/percentil-peso.html" class="text-gray-600 hover:text-blue-600">Percentil Peso</a>
+        <a href="templates/calculadoras/imc-infantil.html" class="text-gray-600 hover:text-blue-600">IMC Infantil</a>
+        <a href="templates/calculadoras/perimetro-cefalico.html" class="text-gray-600 hover:text-blue-600">PC Edad</a>
+        <a href="templates/calculadoras/farmacos.html" class="text-gray-600 hover:text-blue-600">Calculadora Farmacológica</a>
+        <a href="templates/protocolos/protocolos.html" class="text-gray-600 hover:text-blue-600">Protocolos</a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+  <!-- PRESENTACIÓN -->
+  <header class="bg-white/80 p-8 rounded-xl shadow max-w-4xl mx-auto text-center mb-12">
+    <h1 class="text-4xl font-bold text-blue-700 mb-4">Plataforma de Apoyo Pediátrico</h1>
+    <p class="text-gray-700 text-lg">Esta herramienta fue diseñada para estudiantes, internos y médicos que deseen acceder rápidamente a recursos clínicos de uso común en pediatría.</p>
+    <p class="text-sm text-gray-500 mt-2">Cada módulo está construido para facilitar decisiones clínicas, hacer cálculos rápidos y explorar guías de desarrollo.</p>
+  </header>
+
+  <!-- MÓDULOS DISPONIBLES -->
+<main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <a href="templates/calculadoras/edad-corregida.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">🧠 Desarrollo Infantil</h2>
+    <p class="text-sm text-gray-600 mt-2">Explora los hitos por mes y utiliza la calculadora de edad corregida.</p>
+  </a>
+
+  <a href="templates/calculadoras/percentil-peso.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">⚖️ Percentil Peso</h2>
+    <p class="text-sm text-gray-600 mt-2">Estima el percentil de peso según edad y sexo.</p>
+  </a>
+
+  <a href="templates/calculadoras/imc-infantil.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">📊 IMC Infantil</h2>
+    <p class="text-sm text-gray-600 mt-2">Calcula el Índice de Masa Corporal adaptado a niños.</p>
+  </a>
+
+  <a href="templates/calculadoras/perimetro-cefalico.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">🧢 PC para la Edad</h2>
+    <p class="text-sm text-gray-600 mt-2">Evalúa el desarrollo craneal con valores estimados.</p>
+  </a>
+
+  <a href="templates/calculadoras/farmacos.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">💊 Calculadora Farmacológica</h2>
+    <p class="text-sm text-gray-600 mt-2">Calcula dosis pediátricas por peso, con ficha técnica de los medicamentos más comunes en México.</p>
+  </a>
+
+  <a href="templates/protocolos/protocolos.html" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <h2 class="text-xl font-semibold text-blue-700">📝 Protocolos Clínicos</h2>
+    <p class="text-sm text-gray-600 mt-2">Consulta guías clínicas rápidas para patologías comunes.</p>
+  </a>  
+  
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-20 py-6">
+  <div class="bg-white rounded-xl px-6 py-4 w-full max-w-4xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+      
+      <!-- Imagen hospital -->
+      <img src="static/img/MAC.png" alt="Hospital MAC" class="h-20 w-auto object-contain">
+
+      <!-- Texto centrado -->
+      <div class="px-4">
+        <p class="text-gray-600 text-sm">
+          Diseñado y desarrollado por: <br> 
+          <span class="font-semibold text-blue-700">Eddie Emouna Chalon</span>
+        </p>
+        <p class="text-gray-500 text-xs mt-1">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Imagen universidad -->
+      <img src="static/img/UW.png" alt="Universidad" class="h-16 w-auto object-contain">
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC Infantil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body class="bg-fondo font-sans p-6">
+
+  <!-- NAV -->
+  <nav class="bg-white shadow mb-10">
+    <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between items-center py-6 gap-4">
+        <div>
+          <a href="../../index.html" class="block h-14">
+            <img src="../../static/img/logo.png" alt="Logo Pediamips" class="h-[80px] inline-block mr-2 align-top">
+          </a>
+        </div>
+      <div class="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 text-center">
+          <a href="edad-corregida.html" class="text-gray-600 hover:text-blue-600">Desarrollo Infantil</a>
+          <a href="percentil-peso.html" class="text-gray-600 hover:text-blue-600">Percentil Peso</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">IMC Infantil</a>
+          <a href="perimetro-cefalico.html" class="text-gray-600 hover:text-blue-600">PC Edad</a>
+          <a href="farmacos.html" class="text-gray-600 hover:text-blue-600">Calculadora Farmacológica</a>
+          <a href="../protocolos/protocolos.html" class="text-gray-600 hover:text-blue-600">Protocolos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow mb-10">
+    <h1 class="text-3xl font-bold text-blue-700 mb-2">Índice de Masa Corporal Infantil (IMC)</h1>
+    <p class="text-gray-600 text-lg">Herramienta clínica para la evaluación nutricional de niños y adolescentes</p>
+    <p class="text-sm text-gray-500">Interpreta el resultado según curvas de crecimiento oficiales (CDC / OMS).</p>
+  </header>
+
+  <!-- CALCULADORA -->
+  <main class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow space-y-6 mb-12">
+    <div>
+      <label class="block text-gray-700 mb-1">Peso (kg):</label>
+      <input type="number" id="peso" class="w-full border border-gray-300 p-2 rounded" min="1" step="0.1">
+    </div>
+    <div>
+      <label class="block text-gray-700 mb-1">Talla (cm):</label>
+      <input type="number" id="talla" class="w-full border border-gray-300 p-2 rounded" min="30" step="0.1">
+    </div>
+    <button onclick="calcularIMC()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Calcular IMC</button>
+    <div id="resultado" class="mt-4 hidden p-4 rounded text-white text-center font-medium"></div>
+  </main>
+
+  <!-- TEXTO INFORMATIVO -->
+  <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow space-y-4 text-gray-700 text-justify">
+    <h2 class="text-xl font-bold text-blue-600">¿Qué es el IMC?</h2>
+    <p>El Índice de Masa Corporal (IMC) es una fórmula matemática que relaciona el peso y la estatura. Se calcula dividiendo el peso (en kilogramos) entre el cuadrado de la estatura (en metros):</p>
+    <p class="text-center font-mono text-blue-700">IMC = Peso (kg) ÷ [Talla (m)]²</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">IMC en pediatría</h2>
+    <p>En población pediátrica, el IMC por sí solo no es suficiente. Debe compararse con referencias de edad y sexo, utilizando percentilas o puntuación Z. Estas curvas reflejan la distribución normal de una población saludable.</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">¿Cómo se interpreta el IMC infantil?</h2>
+    <ul class="list-disc pl-6">
+      <li><strong>&lt; Percentil 5:</strong> Bajo peso</li>
+      <li><strong>Percentil 5–84:</strong> Peso saludable</li>
+      <li><strong>Percentil 85–94:</strong> Riesgo de sobrepeso</li>
+      <li><strong>≥ Percentil 95:</strong> Obesidad</li>
+    </ul>
+    <p>Estas interpretaciones se basan en tablas CDC (niños &gt;2 años) o WHO (niños menores de 5 años).</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">¿Qué son las percentilas y la puntuación Z?</h2>
+    <p>Una <strong>percentila</strong> indica la posición del niño respecto a una población de referencia. Por ejemplo, un IMC en el percentil 75 significa que el 75% de los niños de su misma edad y sexo tienen un IMC igual o menor.</p>
+    <p>La <strong>puntuación Z</strong> o <em>z-score</em> expresa cuántas desviaciones estándar se encuentra el valor respecto a la media. Es útil en investigación y en condiciones extremas (desnutrición severa, obesidad mórbida).</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">¿Qué referencias usar: OMS o CDC?</h2>
+    <ul class="list-disc pl-6">
+      <li><strong>OMS:</strong> Niños de 0 a 5 años. Basada en datos multiculturales de niños criados bajo condiciones ideales.</li>
+      <li><strong>CDC:</strong> Niños y adolescentes de 2 a 19 años. Refleja datos poblacionales reales de EE. UU.</li>
+    </ul>
+
+    <h2 class="text-lg font-semibold text-blue-600">Aplicación clínica</h2>
+    <p>El IMC debe ser parte de una <strong>valoración nutricional integral</strong>, que incluya historia clínica, antecedentes prenatales y familiares, examen físico, evolución longitudinal y análisis dietético. No se debe usar de forma aislada para etiquetar patologías.</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">¿Hay curvas especiales?</h2>
+    <p>Sí. Existen curvas adaptadas para patologías específicas como <strong>síndrome de Down, parálisis cerebral</strong> o prematuros extremos. Estas deben usarse bajo supervisión de pediatra especializado.</p>
+
+    <h2 class="text-lg font-semibold text-blue-600">Conclusión</h2>
+    <p>El IMC es una herramienta práctica y accesible para monitorear el crecimiento, pero requiere interpretación experta. Asegúrate de usar tablas adecuadas y correlacionarlo con datos clínicos.</p>
+  </section>
+
+<!-- CURVAS CDC -->
+<section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow mb-16 space-y-6 text-gray-700">
+    <h2 class="text-xl font-bold text-blue-600">Tablas de IMC por edad y sexo</h2>
+    <p>Las siguientes gráficas permiten comparar el IMC con los percentiles estándar. Busca la edad del paciente en el eje horizontal y ubica su IMC en el eje vertical. Identifica en qué curva (percentil) se encuentra el punto para clasificarlo correctamente.</p>
+  
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="text-center">
+        <p class="mb-1 font-semibold">Niños (CDC 2-19 años)</p>
+        <img src="../../static/img/tablas-imc/nino-cdc.png" alt="IMC CDC Niño" class="rounded shadow">
+      </div>
+      <div class="text-center">
+        <p class="mb-1 font-semibold">Niñas (CDC 2-19 años)</p>
+        <img src="../../static/img/tablas-imc/nina-cdc.png" alt="IMC CDC Niña" class="rounded shadow">
+      </div>
+    </div>
+  
+    <p class="text-sm text-gray-500 mt-4">Fuente: CDC. Clinical Growth Charts. 2000.</p>
+  </section>
+<section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow space-y-4 text-gray-700 text-justify">
+    <h2 class="text-lg font-semibold text-blue-600">¿Cómo interpretar las curvas?</h2>
+    <p>1️⃣ Localiza la edad del niño (en meses o años) en el eje horizontal.</p>
+    <p>2️⃣ Marca el valor de su IMC en el eje vertical.</p>
+    <p>3️⃣ Traza una línea para encontrar el punto de intersección.</p>
+    <p>4️⃣ Observa en qué curva se encuentra: si está en el percentil 85, indica riesgo de sobrepeso; si está sobre el 95, es indicativo de obesidad.</p>
+    <p>5️⃣ Realiza un seguimiento longitudinal: múltiples puntos a lo largo del tiempo brindan más información que un solo valor.</p>
+  </section>
+  
+  
+
+  <!-- FOOTER -->
+  <footer class="mt-20 py-6">
+    <div class="bg-white rounded-xl px-6 py-4 w-fit mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+  
+      
+      <!-- Imagen hospital -->
+      <img src="../../static/img/MAC.png" alt="Hospital MAC" class="h-24 w-auto object-contain">
+  
+      <!-- Texto centrado -->
+      <div class="px-4">
+        <p class="text-gray-600 text-sm">
+          Diseñado y desarrollado por: <br> 
+          <span class="font-semibold text-blue-700">Eddie Emouna Chalon</span>
+        </p>
+        <p class="text-gray-500 text-xs mt-1">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+  
+      <!-- Imagen universidad -->
+      <img src="../../static/img/UW.png" alt="Universidad" class="h-16 w-auto object-contain">
+  
+    </div>
+</div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../static/js/calculadoras/imc-infantil.js"></script>
+</body>
+</html>
