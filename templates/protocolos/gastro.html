@@ -34,27 +34,72 @@
   <!-- CONTENEDOR DESPLAZABLE -->
   <main class="relative overflow-hidden max-w-6xl mx-auto pt-[90px]">
     
-    <!-- 5.1 -->
-    <section id="sec-51" class="slide w-full min-h-[70vh] p-6">
+  <!-- 🔸 MÓDULO GASTRO – contenedor blanco -->
+<div class="bg-white rounded-xl shadow max-w-6xl mx-auto">
+
+  <!-- 🔸 Barra interna de navegación -->
+  <nav id="subnav" class="flex gap-2 overflow-x-auto border-b px-4 py-3 text-sm font-medium sticky top-[88px] bg-white z-10">
+    <button data-idx="0" class="subtab px-3 py-1 rounded bg-blue-200 text-blue-700 font-semibold">5.1 Gastroenteritis</button>
+    <button data-idx="1" class="subtab px-3 py-1 rounded hover:bg-blue-100">5.2 Deshidratación</button>
+    <button data-idx="2" class="subtab px-3 py-1 rounded hover:bg-blue-100">5.3 Ácido-Base</button>
+    <button data-idx="3" class="subtab px-3 py-1 rounded hover:bg-blue-100">5.4 Hidratación</button>
+  </nav>
+
+  <!-- 🔸 Área deslizable -->
+  <div id="slides" class="flex w-full transition-transform duration-300">
+
+    <!-- Slide 0 -->
+    <section class="w-full flex-shrink-0 p-6 min-h-[70vh]">
       <h1 class="text-2xl font-bold text-blue-700 mb-4">5.1 Gastroenteritis infecciosa</h1>
       <p class="text-gray-700">*Placeholder* – definición, etiología, red flags …</p>
     </section>
 
-    <!-- 5.2 -->
-    <section id="sec-52" class="slide w-full min-h-[70vh] p-6 hidden">
+    <!-- Slide 1 -->
+    <section class="w-full flex-shrink-0 p-6 min-h-[70vh]">
       <h1 class="text-2xl font-bold text-blue-700 mb-4">5.2 Grados de deshidratación</h1>
       <p class="text-gray-700">*Placeholder* – tabla OMS …</p>
     </section>
 
-    <!-- 5.3 -->
-    <section id="sec-53" class="slide w-full min-h-[70vh] p-6 hidden">
+    <!-- Slide 2 -->
+    <section class="w-full flex-shrink-0 p-6 min-h-[70vh]">
       <h1 class="text-2xl font-bold text-blue-700 mb-4">5.3 Desequilibrio ácido-base</h1>
       <p class="text-gray-700">*Placeholder* – fórmulas …</p>
     </section>
 
-    <!-- 5.4 -->
-    <section id="sec-54" class="slide w-full min-h-[70vh] p-6 hidden">
+    <!-- Slide 3 -->
+    <section class="w-full flex-shrink-0 p-6 min-h-[70vh]">
       <h1 class="text-2xl font-bold text-blue-700 mb-4">5.4 Planes de hidratación</h1>
+
+      <!-- Calculadora -->
+      <form id="calc-form" class="bg-gray-50 border rounded p-4 grid gap-4 max-w-md">
+        <label class="block">
+          <span class="text-sm font-medium text-gray-700">Peso (kg)</span>
+          <input name="peso" type="number" step="0.01" class="mt-1 w-full border rounded p-2" required>
+        </label>
+        <label class="block">
+          <span class="text-sm font-medium text-gray-700">% Deshidratación</span>
+          <input name="porcentaje" type="number" step="0.1" class="mt-1 w-full border rounded p-2" required>
+        </label>
+        <button class="bg-blue-600 text-white rounded py-2 hover:bg-blue-700">Calcular</button>
+      </form>
+
+      <div id="calc-out" class="bg-blue-50 border-l-4 border-blue-600 p-4 hidden mt-4">
+        <h2 class="font-semibold mb-2">Resultados</h2>
+        <p id="vol-total"></p>
+        <p id="vol-hora"></p>
+        <p id="solucion"></p>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-2">
+        Instrucciones: ingresa el peso y la estimación de deshidratación.  
+        Volumen total = peso × (%/100) × 1000.  
+        El sistema sugiere Plan A (&lt;5 %), B (5-10 %, 4 h) o C (&gt;10 %, 3 h).
+      </p>
+    </section>
+
+  </div> <!-- /slides -->
+</div> <!-- /módulo -->
+
 
       <!-- CALCULADORA -->
       <form id="calc-form" class="bg-white shadow rounded p-4 grid gap-4 max-w-md">
